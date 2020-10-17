@@ -1,0 +1,29 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            //"label": "C/C++: g++.exe build active file",
+            "label": "task g++",
+            "command": "C:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\bin\\g++.exe",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\out\\${fileBasenameNoExtension}.exe",
+                "-fexec-charset=GBK",   // 处理mingw中文编码问题
+                "-finput-charset=UTF-8"// 处理mingw中文编码问题
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "version": "2.0.0"
+}
