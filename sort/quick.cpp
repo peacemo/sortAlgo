@@ -57,6 +57,7 @@ int partition(vector<int> &seq, int low, int high) {
 }
 
 void quickSort(vector<int> &seq, int low, int high) {
+    
     int pivot = 0;
     if(low < high) {
         pivot = partition(seq, low, high); //划分操作
